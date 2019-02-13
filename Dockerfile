@@ -36,6 +36,8 @@ RUN set -x \
 	&& [ "$JAVA_HOME" = "$(docker-java-home)" ]
 
 # install git.
-RUN apk --update add git openssh && \
+RUN apk update && \
+    apk upgrade && \
+    apk add --no-cache --virtual .build-deps bash git make gcc g++ python openssh-client && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
