@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:10-alpine
 MAINTAINER formio
 
 # Install JAVA https://github.com/docker-library/openjdk/blob/master/8/jdk/alpine/Dockerfile
